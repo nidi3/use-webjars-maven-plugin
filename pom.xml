@@ -18,6 +18,14 @@
 
     <name>${project.artifactId}</name>
     <description>Maven plugin to use webjars as if thy were npm modules.</description>
+    <url>https://github.com/nidi3/use-webjars-maven-plugin</url>
+    <inceptionYear>2017</inceptionYear>
+
+    <scm>
+        <connection>scm:git:https://github.com/nidi3/use-webjars-maven-plugin</connection>
+        <developerConnection>scm:git:https://github.com/nidi3/use-webjars-maven-plugin</developerConnection>
+        <url>https://github.com/nidi3/use-webjars-maven-plugin</url>
+    </scm>
 
     <build>
         <plugins>
