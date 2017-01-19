@@ -62,7 +62,7 @@ target
 
 # Configuration
 
-The [plugin site](https://nidi3.github.io/use-webjars-maven-plugin/site/plugin-info.html) lists all options.
+The [plugin site](https://nidi3.github.io/use-webjars-maven-plugin/site/unpack-mojo.html) lists all options.
 
 ## Flatten
 Adding 
