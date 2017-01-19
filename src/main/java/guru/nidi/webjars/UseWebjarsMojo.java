@@ -33,6 +33,12 @@ import java.util.Arrays;
 
 /**
  * Unpack all webjar dependencies and strip the version.
+ * All settings from <a href="https://maven.apache.org/plugins/maven-dependency-plugin/unpack-dependencies-mojo.html">
+ * maven-dependency-plugin:unpack-dependencies</a> are supported.
+ * Additional parameters are:
+ * <ul>
+ *     <li><a href="#flatten">flatten</a></li>
+ * </ul>
  */
 @Mojo(name = "unpack", requiresDependencyResolution = ResolutionScope.TEST,
         defaultPhase = LifecyclePhase.GENERATE_RESOURCES, threadSafe = true)

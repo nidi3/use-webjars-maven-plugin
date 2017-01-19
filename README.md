@@ -57,10 +57,13 @@ target
             resources
                 webjars
                     angularjs
-                        ...
+                        <contents of angularjs>
 ````
 
 # Configuration
+
+The [plugin site](https://nidi3.github.io/use-webjars-maven-plugin/site/plugin-info.html) lists all options.
+
 ## Flatten
 Adding 
 ````
@@ -75,7 +78,7 @@ src
 target
     webjars
         angularjs
-            ...
+            <contents of angularjs>
 ````
 
 ## Further settings
