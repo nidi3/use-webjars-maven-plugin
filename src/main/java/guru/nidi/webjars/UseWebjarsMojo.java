@@ -26,7 +26,6 @@ import org.apache.maven.plugins.dependency.fromDependencies.UnpackDependenciesMo
 import org.apache.maven.plugins.dependency.utils.DependencyStatusSets;
 import org.apache.maven.plugins.dependency.utils.DependencyUtil;
 import org.apache.maven.plugins.dependency.utils.markers.DefaultFileMarkerHandler;
-import org.codehaus.plexus.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -77,8 +76,9 @@ public class UseWebjarsMojo extends UnpackDependenciesMojo {
             getLog().info("Set outputDirectory to '" + getOutputDirectory() + "'");
         }
         final String groups = "org.webjars";
-        if (includeGroupIds == null || !includeGroupIds.contains(groups)) {
-            includeGroupIds = groups + (StringUtils.isEmpty(includeGroupIds) ? "" : "," + includeGroupIds);
+        final boolean noGroupIds = includeGroupIds == null || includeGroupIds.length() == 0;
+        if (noGroupIds || !includeGroupIds.contains(groups)) {
+            includeGroupIds = groups + (noGroupIds ? "" : "," + includeGroupIds);
             getLog().info("Set includeGroupIds to '" + includeGroupIds + "'");
         }
     }
