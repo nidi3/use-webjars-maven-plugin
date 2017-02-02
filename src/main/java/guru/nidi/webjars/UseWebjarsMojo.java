@@ -26,6 +26,7 @@ import org.apache.maven.plugins.dependency.fromDependencies.UnpackDependenciesMo
 import org.apache.maven.plugins.dependency.utils.DependencyStatusSets;
 import org.apache.maven.plugins.dependency.utils.DependencyUtil;
 import org.apache.maven.plugins.dependency.utils.markers.DefaultFileMarkerHandler;
+import org.codehaus.plexus.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +38,7 @@ import java.util.Arrays;
  * maven-dependency-plugin:unpack-dependencies</a> are supported.
  * Additional parameters are:
  * <ul>
- *     <li><a href="#flatten">flatten</a></li>
+ * <li><a href="#flatten">flatten</a></li>
  * </ul>
  */
 @Mojo(name = "unpack", requiresDependencyResolution = ResolutionScope.TEST,
@@ -77,7 +78,7 @@ public class UseWebjarsMojo extends UnpackDependenciesMojo {
         }
         final String groups = "org.webjars";
         if (includeGroupIds == null || !includeGroupIds.contains(groups)) {
-            includeGroupIds = groups + "," + includeGroupIds;
+            includeGroupIds = groups + (StringUtils.isEmpty(includeGroupIds) ? "" : "," + includeGroupIds);
             getLog().info("Set includeGroupIds to '" + includeGroupIds + "'");
         }
     }
