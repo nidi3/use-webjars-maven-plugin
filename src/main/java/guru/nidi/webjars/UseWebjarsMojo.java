@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Stefan Niederhauser (nidin@gmx.ch)
+ * Copyright (C) 2017 Stefan Niederhauser (nidin@gmx.ch)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,12 @@ import java.util.Arrays;
 
 /**
  * Unpack all webjar dependencies and strip the version.
+ * All settings from <a href="https://maven.apache.org/plugins/maven-dependency-plugin/unpack-dependencies-mojo.html">
+ * maven-dependency-plugin:unpack-dependencies</a> are supported.
+ * Additional parameters are:
+ * <ul>
+ *     <li><a href="#flatten">flatten</a></li>
+ * </ul>
  */
 @Mojo(name = "unpack", requiresDependencyResolution = ResolutionScope.TEST,
         defaultPhase = LifecyclePhase.GENERATE_RESOURCES, threadSafe = true)

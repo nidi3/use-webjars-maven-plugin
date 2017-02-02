@@ -1,0 +1,14 @@
+<project>
+    <body>
+        <menu ref="reports" />
+        <footer>
+            <![CDATA[Copyright &copy; 2017 <a href="http://nidi.guru">nidi.guru</a>]]>
+        </footer>
+    </body>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.5</version>
+    </skin>
+</project>
